@@ -11,9 +11,8 @@ namespace Catalog.API.Entities
 
         public string Name { get; set; }
 
-        [BsonElement("Category")]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string CategoryId { get; set; }
+        public string Category { get; set; }
 
         public string Summary { get; set; }
 

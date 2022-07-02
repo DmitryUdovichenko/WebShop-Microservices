@@ -4,7 +4,7 @@ using MongoDB.Driver;
 
 namespace Catalog.API.Repositories
 {
-    public class ProductRepository : ICatalogItemRepository<Product>
+    public class ProductRepository : IProductRepository
     {
         private readonly ICatalogContext _context;
 
@@ -47,7 +47,7 @@ namespace Catalog.API.Repositories
 
         public async Task<IEnumerable<Product>> GetByCategory(string id)
         {
-            FilterDefinition<Product> filter = Builders<Product>.Filter.ElemMatch(p => p.CategoryId, id);
+            FilterDefinition<Product> filter = Builders<Product>.Filter.Eq(p => p.Category, id);
 
             return await _context.Products.Find(filter).ToListAsync();
         }

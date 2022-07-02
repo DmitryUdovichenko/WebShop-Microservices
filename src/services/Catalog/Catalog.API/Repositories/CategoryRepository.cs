@@ -4,7 +4,7 @@ using MongoDB.Driver;
 
 namespace Catalog.API.Repositories
 {
-    public class CategoryRepository : ICatalogItemRepository<Category>
+    public class CategoryRepository : ICategoryRepository
     {
         private readonly ICatalogContext _context;
 
