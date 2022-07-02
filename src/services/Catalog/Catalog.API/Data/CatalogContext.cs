@@ -18,6 +18,7 @@ namespace Catalog.API.Data
             _context = _client.GetDatabase(configuration.GetValue<string>("DatabaseSettings:DatabaseName"));
             Products = _context.GetCollection<Product>(configuration.GetValue<string>("DatabaseSettings:ProductsCollectionName"));
             Categories = _context.GetCollection<Category>(configuration.GetValue<string>("DatabaseSettings:CategoriesCollectionName"));
+            CatalogContextSeed.SeedData(Products, Categories);
 
         }
 
