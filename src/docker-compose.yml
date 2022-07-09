@@ -20,6 +20,7 @@ services:
       dockerfile: Services/Catalog/Catalog.API/Dockerfile
 
   basket.api:
+    image: ${DOCKER_REGISTRY-}basketapi
     build:
       context: .
       dockerfile: services/Basket/Basket.API/Dockerfile
