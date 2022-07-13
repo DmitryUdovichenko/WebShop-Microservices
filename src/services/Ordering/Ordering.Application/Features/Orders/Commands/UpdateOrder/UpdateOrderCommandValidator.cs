@@ -1,24 +1,24 @@
 ﻿using FluentValidation;
 
-namespace Ordering.Application.Features.Orders.Commands.CheckoutOrder
+namespace Ordering.Application.Features.Orders.Commands.UpdateOrder
 {
-    public class CheckoutOrderCommandValidator : AbstractValidator<CheckoutOrderCommand>
+    public class UpdateOrderCommandValidator : AbstractValidator<UpdateOrderCommand>
     {
-        public CheckoutOrderCommandValidator()
+        public UpdateOrderCommandValidator()
         {
-            RuleFor(c => c.UserId)
-                .NotEmpty().WithMessage("{UserId} is required.")
+            RuleFor(u => u.Id)
+                .NotEmpty().WithMessage("{Id} is required.")
                 .NotNull();
 
-            RuleFor(c => c.UserName)
+            RuleFor(u => u.UserName)
                 .NotEmpty().WithMessage("{UserName} is required.")
                 .NotNull()
                 .MaximumLength(50).WithMessage("{UserName} max length 50 characters.");
 
-            RuleFor(p => p.EmailAddress)
+            RuleFor(u => u.EmailAddress)
                .NotEmpty().WithMessage("{EmailAddress} is required.");
 
-            RuleFor(p => p.TotalPrice)
+            RuleFor(u => u.TotalPrice)
                 .NotEmpty().WithMessage("{TotalPrice} is required.")
                 .GreaterThan(0).WithMessage("{TotalPrice} should be greater than zero.");
         }

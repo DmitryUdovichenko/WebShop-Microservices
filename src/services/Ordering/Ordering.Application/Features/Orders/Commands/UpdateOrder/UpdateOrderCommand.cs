@@ -1,9 +1,10 @@
 ﻿using MediatR;
 
-namespace Ordering.Application.Features.Orders.Commands.CheckoutOrder
+namespace Ordering.Application.Features.Orders.Commands.UpdateOrder
 {
-    public class CheckoutOrderCommand : IRequest<Guid>
+    public class UpdateOrderCommand : IRequest
     {
+        public Guid Id { get; set; }
         public Guid UserId { get; set; }
         public string UserName { get; set; }
         public decimal TotalPrice { get; set; }
