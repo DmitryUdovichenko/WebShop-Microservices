@@ -8,7 +8,7 @@ using Ordering.Infrastructure.Mail;
 using Ordering.Infrastructure.Persistence;
 using Ordering.Infrastructure.Repositories;
 
-namespace Ordering.Application
+namespace Ordering.Infrastructure
 {
     public static class DependencyInjection
     {

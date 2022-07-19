@@ -2,7 +2,7 @@
 
 namespace Ordering.Application.Features.Orders.Commands.CheckoutOrder
 {
-    public class CheckoutOrderCommand : IRequest<Guid>
+    public class CheckoutOrderCommand : IRequest<int>
     {
         public Guid UserId { get; set; }
         public string UserName { get; set; }
