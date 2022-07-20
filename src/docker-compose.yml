@@ -7,6 +7,15 @@ services:
   redis:
     image: redis
 
+  discountdb:
+    image: postgres
+
+  orderdb:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+ 
+  pgadmin:
+    image: dpage/pgadmin4
+
   catalog.api:
     image: ${DOCKER_REGISTRY-}catalogapi
     build:
