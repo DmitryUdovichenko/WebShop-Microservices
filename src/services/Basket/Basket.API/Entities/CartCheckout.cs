@@ -1,8 +1,6 @@
-﻿using MediatR;
-
-namespace Ordering.Application.Features.Orders.Commands.CheckoutOrder
+﻿namespace Basket.API.Entities
 {
-    public class CheckoutOrderCommand : IRequest<int>
+    public class CartCheckout
     {
         public string UserId { get; set; }
         public string UserName { get; set; }
