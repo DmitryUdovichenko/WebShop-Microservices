@@ -1,9 +1,6 @@
-﻿using Ordering.Domain.Common;
-using System;
-
-namespace Ordering.Domain.Entities
+﻿namespace Basket.API.Entities
 {
-    public class Order : BaseEntity
+    public class CartCheckout
     {
         public string UserId { get; set; }
         public string UserName { get; set; }

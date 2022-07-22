@@ -1,9 +1,12 @@
-﻿using Ordering.Domain.Common;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Ordering.Domain.Entities
+namespace EventBus.Messages.Events
 {
-    public class Order : BaseEntity
+    public class BasketCheckoutEvent : BaseEvent
     {
         public string UserId { get; set; }
         public string UserName { get; set; }
