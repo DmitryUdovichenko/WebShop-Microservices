@@ -28,7 +28,7 @@ namespace Ordering.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Guid>> Checkout([FromBody] CheckoutOrderCommand command)
+        public async Task<ActionResult<int>> Checkout([FromBody] CheckoutOrderCommand command)
         {
             var result = await _mediator.Send(command);
             return Ok(result);
@@ -42,9 +42,9 @@ namespace Ordering.API.Controllers
         }
 
         [HttpDelete]
-        public async Task<ActionResult> Delete(string id)
+        public async Task<ActionResult> Delete(int id)
         {
-            var command = new DeleteOrderCommand() { Id = Guid.Parse(id) };
+            var command = new DeleteOrderCommand() { Id = id };
             await _mediator.Send(command);
             return NoContent();
         }
