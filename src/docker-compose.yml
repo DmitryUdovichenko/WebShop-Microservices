@@ -49,7 +49,14 @@ services:
       context: .
       dockerfile: services/Ordering/Ordering.API/Dockerfile
 
+  ocelotgateway:
+    image: ${DOCKER_REGISTRY-}ocelotgateway
+    build:
+      context: .
+      dockerfile: Gateways/OcelotGateway/Dockerfile
+
 volumes:
   mongo_data: 
   postgres_data:
   pgadmin_data:
+
