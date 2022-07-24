@@ -55,8 +55,15 @@ services:
       context: .
       dockerfile: Gateways/OcelotGateway/Dockerfile
 
+  webshop.aggregator:
+    image: ${DOCKER_REGISTRY-}webshopaggregator
+    build:
+      context: .
+      dockerfile: Gateways/WebShop.Aggregator/Dockerfile
+
 volumes:
   mongo_data: 
   postgres_data:
   pgadmin_data:
+
 

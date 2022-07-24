@@ -121,3 +121,19 @@ services:
     ports:
       - "8010:80"
 
+
+  webshop.aggregator:
+    container_name: webshop.aggregator
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionStrings:CatalogUrl=http://catalog.api"
+      - "ConnectionStrings:BasketUrl=http://basket.api"
+      - "ConnectionStrings:OrderingUrl=http://ordering.api"
+    depends_on:
+      - catalog.api
+      - basket.api
+      - discount.api
+      - ordering.api
+    ports:
+      - "8005:80"
+
