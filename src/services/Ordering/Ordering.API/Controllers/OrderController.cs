@@ -8,7 +8,7 @@ using Ordering.Application.Features.Orders.Queries.GetOrdersList;
 
 namespace Ordering.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class OrderController : ControllerBase
     {
@@ -19,7 +19,7 @@ namespace Ordering.API.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet]
+        [HttpGet("{userName}")]
         public async Task<ActionResult<IEnumerable<OrderViewModel>>> Get(string userName)
         {
             var query = new GetOrdersListQuery(userName);
