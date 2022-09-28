@@ -1,6 +1,6 @@
 ﻿namespace Ordering.Application.Features.Orders.Queries.GetOrdersList
 {
-    public class OrderViewModel
+    public class OrderDto
     {
         public string UserId { get; set; }
         public string UserName { get; set; }
@@ -19,7 +19,7 @@
         public string CardName { get; set; }
         public string CardNumber { get; set; }
         public string Expiration { get; set; }
-        public string CVV { get; set; }
+        public string Cvv { get; set; }
         public int PaymentMethod { get; set; }
     }
 }

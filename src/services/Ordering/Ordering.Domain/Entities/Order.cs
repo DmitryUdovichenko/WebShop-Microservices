@@ -24,5 +24,14 @@ namespace Ordering.Domain.Entities
         public string Expiration { get; set; }
         public string CVV { get; set; }
         public int PaymentMethod { get; set; }
+        
+        // public string UserId { get; private set; }
+        // public string UserName { get; private set; }
+        // public decimal TotalPrice { get; private set; }
+        // public int  AddressId { get; private set; }
+        // public int PaymentId { get; private set; }
+        // public virtual Address Address { get; private set; }
+        //
+        // public virtual Payment Payment { get; private set; }
     }
 }

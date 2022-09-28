@@ -1,4 +1,5 @@
 ﻿using Catalog.API.Entities;
+using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
 namespace Catalog.API.Data
@@ -12,12 +13,13 @@ namespace Catalog.API.Data
 
         public IMongoCollection<Category> Categories { get; }
 
-        public CatalogContext(IConfiguration configuration)
+        public CatalogContext(IOptions<DbSettings> dbSettings)
         {
-            _client = new MongoClient(configuration.GetValue<string>("DatabaseSettings:ConnectionString"));
-            _context = _client.GetDatabase(configuration.GetValue<string>("DatabaseSettings:DatabaseName"));
-            Products = _context.GetCollection<Product>(configuration.GetValue<string>("DatabaseSettings:ProductsCollectionName"));
-            Categories = _context.GetCollection<Category>(configuration.GetValue<string>("DatabaseSettings:CategoriesCollectionName"));
+            var dbSettingsValue = dbSettings.Value;
+            _client = new MongoClient( dbSettingsValue.ConnectionString );
+            _context = _client.GetDatabase( dbSettingsValue.DatabaseName );
+            Products = _context.GetCollection<Product>( dbSettingsValue.ProductsCollectionName );
+            Categories = _context.GetCollection<Category>( dbSettingsValue.CategoriesCollectionName );
             CatalogContextSeed.SeedData(Products, Categories);
 
         }

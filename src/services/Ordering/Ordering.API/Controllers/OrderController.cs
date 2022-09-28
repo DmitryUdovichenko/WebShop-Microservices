@@ -20,7 +20,7 @@ namespace Ordering.API.Controllers
         }
 
         [HttpGet("{userName}")]
-        public async Task<ActionResult<IEnumerable<OrderViewModel>>> Get(string userName)
+        public async Task<ActionResult<IEnumerable<OrderDto>>> Get(string userName)
         {
             var query = new GetOrdersListQuery(userName);
             var orders = await _mediator.Send(query);
