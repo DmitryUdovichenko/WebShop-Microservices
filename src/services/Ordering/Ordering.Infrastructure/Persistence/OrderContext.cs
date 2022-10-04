@@ -1,12 +1,20 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Ordering.Domain.Common;
 using Ordering.Domain.Entities;
+using Ordering.Domain.Entities.BillingAddress;
+using Ordering.Domain.Entities.Payment;
 
 namespace Ordering.Infrastructure.Persistence
 {
     public class OrderContext : DbContext
     {
         public DbSet<Order> Orders { get; set; }
+        public DbSet<PaymentAttributes> PaymentAttributes { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+        
+        public OrderContext()
+        {
+        }
 
         public OrderContext(DbContextOptions<OrderContext> options) : base(options)
         {

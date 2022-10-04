@@ -15,8 +15,8 @@ namespace Ordering.Application.Features.Orders.Commands.UpdateOrder
                 .NotNull()
                 .MaximumLength(50).WithMessage("{UserName} max length 50 characters.");
 
-            RuleFor(u => u.EmailAddress)
-               .NotEmpty().WithMessage("{EmailAddress} is required.");
+            // RuleFor(u => u.EmailAddress)
+            //    .NotEmpty().WithMessage("{EmailAddress} is required.");
 
             RuleFor(u => u.TotalPrice)
                 .NotEmpty().WithMessage("{TotalPrice} is required.")

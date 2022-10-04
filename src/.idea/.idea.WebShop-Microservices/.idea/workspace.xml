@@ -17,15 +17,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2bdf75ba-32fe-4a89-9677-b47b9a7a77ca" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/services/Catalog/Catalog.API/Entities/DbSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/Catalog/Catalog.API/Data/CatalogContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Catalog/Catalog.API/Data/CatalogContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/Catalog/Catalog.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Catalog/Catalog.API/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.API/Controllers/AddressController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.API/Controllers/PaymentController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Contracts/Persistence/IAddressRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Contracts/Persistence/IPaymentRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/CreateAddress/CreateAddressCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/CreateAddress/CreateAddressCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/CreateAddress/CreateAddressCommandValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/CreatePayment/CreatePaymentCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/CreatePayment/CreatePaymentCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/CreatePayment/CreatePaymentCommandValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/DeleteAddress/DeleteAddressCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/DeleteAddress/DeleteAddressCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/DeletePaymentCredentials/DeletePaymentCredentialsCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/DeletePaymentCredentials/DeletePaymentCredentialsCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/UpdateAddress/UpdateAddressCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/UpdateAddress/UpdateAddressCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/UpdateAddress/UpdateAddressCommandValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/UpdatePaymentCredentials/UpdatePaymentCredentialsCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/UpdatePaymentCredentials/UpdatePaymentCredentialsCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/UpdatePaymentCredentials/UpdatePaymentCredentialsCommandValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Queries/GetAddresesList/AddressDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Queries/GetAddresesList/GetAddressListQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Queries/GetAddresesList/GetAddressListQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Queries/GetPaymentsList/GetPaymentListQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Queries/GetPaymentsList/GetPaymentListQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Queries/GetPaymentsList/PaymentDTO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Domain/Entities/Payment/PaymentAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Infrastructure/Migrations/20221004070329_EntityRefactor.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Infrastructure/Migrations/20221004070329_EntityRefactor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Infrastructure/Repositories/AddressRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Infrastructure/Repositories/PaymentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebShop-Microservices/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebShop-Microservices/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EventBus/EventBus.Messages/Events/BasketCheckoutEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EventBus/EventBus.Messages/Events/BasketCheckoutEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gateways/WebShop.Aggregator/Models/OrderResponseModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Gateways/WebShop.Aggregator/Models/OrderResponseModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/Basket/Basket.API/Entities/CartCheckout.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Basket/Basket.API/Entities/CartCheckout.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.API/Controllers/OrderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Ordering/Ordering.API/Controllers/OrderController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Queries/GetOrdersList/GetOrdersListQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Queries/GetOrdersList/GetOrdersListQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/CheckoutOrder/CheckoutOrderCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/CheckoutOrder/CheckoutOrderCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/CheckoutOrder/CheckoutOrderCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/CheckoutOrder/CheckoutOrderCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/CheckoutOrder/CheckoutOrderCommandValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/CheckoutOrder/CheckoutOrderCommandValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/UpdateOrder/UpdateOrderCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/UpdateOrder/UpdateOrderCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/UpdateOrder/UpdateOrderCommandValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Commands/UpdateOrder/UpdateOrderCommandValidator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Queries/GetOrdersList/GetOrdersListQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Queries/GetOrdersList/GetOrdersListQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Queries/GetOrdersList/OrderViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Queries/GetOrdersList/OrderDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Features/Orders/Queries/GetOrdersList/OrderDTO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Mappers/MapperProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Application/Mappers/MapperProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Domain/Entities/BillingAddress/Address.Aggregate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Domain/Entities/BillingAddress/Address.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Domain/Entities/BillingAddress/Address.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Domain/Entities/Order.Aggregate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Domain/Entities/Order.Aggregate.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Domain/Entities/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Domain/Entities/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Domain/Entities/Payment/Payment.Aggregate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Domain/Entities/Payment/Payment.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Infrastructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Infrastructure/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Infrastructure/Migrations/OrderContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Infrastructure/Migrations/OrderContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Infrastructure/Persistence/OrderContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Infrastructure/Persistence/OrderContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/Ordering/Ordering.Infrastructure/Persistence/OrderContextSeed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/services/Ordering/Ordering.Infrastructure/Persistence/OrderContextSeed.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +105,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -107,8 +153,21 @@
       <workItem from="1664190753527" duration="788000" />
       <workItem from="1664202855310" duration="1501000" />
       <workItem from="1664262784766" duration="3067000" />
-      <workItem from="1664364288066" duration="1469000" />
+      <workItem from="1664364288066" duration="9224000" />
+      <workItem from="1664437441755" duration="12541000" />
+      <workItem from="1664520540557" duration="4317000" />
+      <workItem from="1664780432295" duration="23790000" />
+      <workItem from="1664864192815" duration="2577000" />
+      <workItem from="1664870628633" duration="494000" />
     </task>
+    <task id="LOCAL-00001" summary="IOption in Catalog services">
+      <created>1664366514184</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664366514184</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,5 +199,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="IOption in Catalog services" />
+    <option name="LAST_COMMIT_MESSAGE" value="IOption in Catalog services" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

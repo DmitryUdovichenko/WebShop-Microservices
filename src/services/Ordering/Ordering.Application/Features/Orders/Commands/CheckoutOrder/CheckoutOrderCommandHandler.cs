@@ -37,7 +37,7 @@ namespace Ordering.Application.Features.Orders.Commands.CheckoutOrder
             {
                 To = "Udovechenkod@gmail.com",
                 Subject = "Order Created",
-                Body = $"Order was created for {order.FirstName} {order.LastName}, order # {order.Id}"
+                Body = $"Order was created for {order.Address.FirstName} {order.Address.LastName}, order # {order.Id}"
             };
             try
             {
